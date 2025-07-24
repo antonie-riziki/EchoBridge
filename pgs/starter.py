@@ -9,7 +9,7 @@ st.markdown("""
     To begin developing with EchoBridge, you'll first need valid Africa’s Talking credentials.  
     Follow this guided process to set up your account and obtain API access.
     """)
-# st.image('src/img/')
+st.image('src/img/')
 
 st.info(f"""
         Head to [Africas Talking]({at_url}) and create an account
