@@ -7,7 +7,7 @@ from streamlit.components.v1 import html
 reg_page = st.Page("./pgs/registration.py", title="register", icon=":material/person_add:")
 signin_page = st.Page("./pgs/signin.py", title="sign in", icon=":material/login:")
 home_page = st.Page("./pgs/main.py", title="home page", icon=":material/home:")
-# closet_page = st.Page("./pgs/closet.py", title="closet IQ", icon=":material/dry_cleaning:")
+starter_page = st.Page("./pgs/starter.py", title="Getting started", icon=":material/dry_cleaning:")
 # roast_page = st.Page("./pgs/roast.py", title="drip roast", icon=":material/theater_comedy:")
 # chatbot_page = st.Page("./pgs/chatbot.py", title="chatbot", icon=":material/chat:")
 
@@ -42,7 +42,7 @@ with st.sidebar:
 
     social_media_icons.render()
 
-pg = st.navigation([reg_page, signin_page, home_page])
+pg = st.navigation([reg_page, signin_page, home_page, starter_page])
 
 st.set_page_config(
     page_title="Echo Bridge",
