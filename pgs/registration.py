@@ -9,7 +9,7 @@ import google.generativeai as genai
 
 sys.path.insert(1, './modules')
 
-from upload_file_rag import get_qa_chain, query_system
+# from upload_file_rag import get_qa_chain, query_system
 from func import welcome_message, send_otp
 
 from dotenv import load_dotenv
@@ -99,6 +99,6 @@ with col1:
 
 
 with col2:
-	st.image('https://giace.org/wp-content/uploads/2019/08/AdobeStock_171882033.jpeg', width=700)
-	st.image('https://today.uconn.edu/wp-content/uploads/2021/10/AdobeStock_217828923-scaled.jpeg', width=800)
-	st.image('https://fadic.net/wp-content/uploads/2019/03/Medication-Error-1.png', width=900)
+	st.image('https://emnaayadi.wordpress.com/wp-content/uploads/2021/11/api-testing.png', width=700)
+	st.image('https://miro.medium.com/v2/resize:fit:1358/1*kYc-QYqXO234agRbzjAJsw.png', width=800)
+	st.image('https://media.licdn.com/dms/image/v2/D4E12AQHVh5lEW4C7FQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1699202062551?e=2147483647&v=beta&t=EXemny6ck7P6xaNjhOryHSoxrUAFyOzdnCLccJBZcRI', width=900)

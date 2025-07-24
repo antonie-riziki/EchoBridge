@@ -1,7 +1,22 @@
 
+
 streamlit
 python-dotenv
 streamlit_option_menu 
-st-social-media-links
 streamlit_chat
 africastalking
+requests
+google-generativeai
+langchain
+langchain-community
+langchain-core
+langchain-google-genai
+google-generativeai
+bcrypt
+python-dotenv
+chromadb
+faiss-cpu
+pypdf
+google-genai
+st-social-media-links
+overpy
