@@ -38,10 +38,15 @@ st.markdown("""
 
     EchoBridge is a secure, sandbox‑style platform built with Streamlit that lets you integrate
     with Africa’s Talking services [SMS, USSD, Voice, Airtime, and Payments] using your API key
-    and username. Switch between sandbox and live environments seamlessly. Designed from
-    day one to be modular, EchoBridge is ready to grow with additional microservice integrations.
+    and username. Switch between sandbox and live environments seamlessly. .
     
     """)
+
+st.info("""
+        **Note:**
+        Designed from day one to be modular, EchoBridge is ready to grow with additional microservice integrations
+        
+        """)
 
 st.subheader("About the System")
 st.markdown("""
@@ -51,10 +56,15 @@ st.markdown("""
     designing USSD menus, triggering voice calls, distributing airtime, and processing mobile
     payments are all accessible through a consistent UI layer.  
     
-    By abstracting provider-specific details into adapters, EchoBridge remains flexible and
-    extensible, ready to absorb new APIs in the future.
+    
     
     """)
+
+st.info(""" 
+        **Note:**
+        By abstracting provider-specific details into adapters, EchoBridge remains flexible and extensible, ready to absorb new APIs in the future.
+        
+        """)
 
 st.subheader("What to Expect")
 st.markdown("""
@@ -70,6 +80,17 @@ st.markdown("""
     - Webhook registration for callbacks like delivery receipts, USSD inputs, and payments
     
     """)
+
+st.info(""" **Note:**
+        EchoBridge offers a safe, isolated sandbox where you can experiment with real‑world SMS, USSD, voice,
+        airtime, and payment flows without affecting live systems or incurring charges. Expect full control over 
+        test scenarios, realistic API behaviors, and clean separation from production data—all designed for safe development and debugging.
+        """)
+
+st.success("""
+        **Tip:** Use data in the sandbox that mirrors your real use cases and test error‑handling paths thoroughly, you will uncover issues early and avoid surprises in production.
+        """)
+
 
 st.subheader("Code of Conduct")
 st.markdown("""
@@ -90,6 +111,12 @@ st.markdown("""
     You may access, modify, or delete your data per applicable data protection rules.
     
     """)
+
+st.warning("""
+        **Warning:** Violations of our Code of Conduct or Terms, such as spam messaging, credential sharing, or misuse of services may result in immediate suspension or termination of access.
+        """)
+
+
 
 st.subheader("Terms & Conditions")
 st.markdown("""
