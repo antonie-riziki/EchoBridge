@@ -1,7 +1,7 @@
 import streamlit as st
 
 at_url = "https://africastalking.com/"
-st.header("Getting Started")
+st.title("Getting Started")
 
 st.subheader("Create an account")
 

@@ -20,3 +20,4 @@ pypdf
 google-genai
 st-social-media-links
 overpy
+streamlit-code-editor
