@@ -85,3 +85,53 @@ with col1:
 
 with col2: 
     st.image('src/img/Screen Shot 2025-07-25 at 13.06.29.png')
+
+st.success("""
+
+        **Tip:** Note down the **Username** we will be using it as our credential
+
+""")
+
+st.subheader('Account Walkthrough')
+
+st.markdown("""
+
+        Once the application is created, click on the **app** name to access the accounts dashboard of that application
+
+""")
+
+st.image('src/img/Screen Shot 2025-07-25 at 13.42.45.png')
+
+st.info("🎉 Africa’s Talking will deposit **KES 10.00** to your account wallet (for new accounts only)")
+
+st.subheader('Africa’s Talking Products')
+col1, col2, col3, col4 = st.columns(4)
+
+with col1:
+    st.image('src/img/Screen Shot 2025-07-25 at 13.46.53.png')
+
+with col2:
+    st.image('src/img/Screen Shot 2025-07-25 at 13.47.16.png')
+
+with col3:
+    st.image('src/img/Screen Shot 2025-07-25 at 13.47.29.png')
+
+with col4:
+    st.image('src/img/Screen Shot 2025-07-25 at 13.47.43.png')
+
+
+col5, col6, col7, col8 = st.columns(4)
+
+with col5:
+    st.image('src/img/Screen Shot 2025-07-25 at 13.47.58.png')
+
+with col6:
+    st.image('src/img/Screen Shot 2025-07-25 at 13.48.11.png')
+
+with col7:
+    st.image('src/img/Screen Shot 2025-07-25 at 13.48.31.png')
+
+with col8:
+    st.image('src/img/Screen Shot 2025-07-25 at 13.49.02.png')
+
+st.subheader("API Key Setup")
