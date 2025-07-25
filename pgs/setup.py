@@ -25,11 +25,13 @@ st.subheader("Installation")
 
 # Python installation 
 st.write('- **Python**')
+
 st.write('Run this in your Terminal')
 st.code("""
     # install required dependancies (pip)
     pip install africastalking python-dotenv
     """)
+
 st.write('Copy to your Script')
 st.code("""
     import africastalking
@@ -74,8 +76,8 @@ st.write('- **Ruby**')
 
 st.write('Run this in your Terminal')
 st.code("""
-    # install required dependancies (npm)
-    gem 'africastalking-ruby'
+    # install required dependancies 
+    gem 'africastalking'
     """)
 
 st.write('Copy to your Script')
@@ -87,5 +89,86 @@ st.code("""
 
     at = AfricasTalking::Initialize.new(username, api_key)
 
+""")
+# code_editor('pip install africastalking python-dotenv', lang='python')
+
+
+
+# Typscript installation 
+st.write('- **Typescript**')
+
+st.write('Run this in your Terminal')
+st.code("""
+    # install required dependancies (npm)
+    npm install africastalking
+    npm install --save-dev @types/africastalking
+    """)
+
+st.write('Copy to your Script')
+st.code("""
+    import AfricasTalking from "africastalking";
+
+    const africastalking = AfricasTalking({
+        username: "USERNAME",            
+        apiKey: "YOUR_API_KEY",        
+    });
+
+""")
+# code_editor('pip install africastalking python-dotenv', lang='python')
+
+
+
+
+# Rust installation 
+st.write('- **Rust**')
+
+st.write('Run this in your Terminal')
+st.code("""
+    # install required dependancies
+    cargo install --git https://github.com/rust-nairobi/africastalking-rust
+    """)
+
+st.write('Copy to your Script')
+st.code("""
+    use africastalking_gateway::AfricasTalkingGateway;
+
+    fn main() {
+        let username = "USERNAME";      
+        let apikey = "YOUR_API_KEY";   
+        let env = "USERNAME";           
+
+        let gateway = AfricasTalkingGateway::new(&username, &apikey, &env);
+""")
+# code_editor('pip install africastalking python-dotenv', lang='python')
+
+
+
+
+# Kotlin installation 
+st.write('- **Kotlin**')
+
+st.write('Run this in your Terminal')
+st.code("""
+    # install required dependancies
+    repositories {
+        maven("https://jitpack.io")
+        }
+
+        dependencies {
+            implementation("com.github.AfricasTalkingLtd.africastalking-java:core:3.4.11")
+        }
+
+    """)
+
+st.write('Copy to your Script')
+st.code("""
+    import com.africastalking.AfricasTalking
+
+    fun main() {
+        val username = "sandbox"      
+        val apiKey   = "YOUR_API_KEY" 
+
+        AfricasTalking.initialize(username, apiKey)
+    }
 """)
 # code_editor('pip install africastalking python-dotenv', lang='python')
