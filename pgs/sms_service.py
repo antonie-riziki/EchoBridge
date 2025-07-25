@@ -54,7 +54,7 @@ st.subheader("Tutorial & Demo")
 
 sample_sms_code = """
     import africastalking
-    import otp_sms
+    import os
     from dotenv import load_dotenv
 
     load_dotenv()
@@ -107,7 +107,7 @@ with st.form('Settings'):
 
 if submit:
     if language=="Python":
-        code = code_editor(sample_sms_code)
+        code = code_editor(sample_sms_code, theme=theme, allow_reset=True)
 
     else:
         pass
