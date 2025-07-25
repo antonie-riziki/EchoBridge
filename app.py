@@ -9,6 +9,7 @@ signin_page = st.Page("./pgs/signin.py", title="sign in", icon=":material/login:
 home_page = st.Page("./pgs/main.py", title="home page", icon=":material/home:")
 starter_page = st.Page("./pgs/starter.py", title="Getting started", icon=":material/app_registration:")
 setup_page = st.Page("./pgs/setup.py", title="Setup & Installation", icon=":material/apk_install:")
+sms_service_page = st.Page("./pgs/sms_service.py", title="Messaging", icon=":material/sms:")
 # chatbot_page = st.Page("./pgs/chatbot.py", title="chatbot", icon=":material/chat:")
 
 with st.sidebar:
@@ -42,7 +43,7 @@ with st.sidebar:
 
     social_media_icons.render()
 
-pg = st.navigation([reg_page, signin_page, home_page, starter_page, setup_page])
+pg = st.navigation([reg_page, signin_page, home_page, starter_page, setup_page, sms_service_page])
 
 st.set_page_config(
     page_title="Echo Bridge",

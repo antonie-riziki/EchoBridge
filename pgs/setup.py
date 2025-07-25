@@ -28,7 +28,7 @@ st.write('Run this in your Terminal')
 st.code("""
     # install required dependancies (pip)
     pip install africastalking python-dotenv
-    """)
+    """, language="python")
 
 st.write('Copy to your Script')
 st.code("""
@@ -43,7 +43,7 @@ st.code("""
         api_key = os.getenv("AT_API_KEY")
     )
 
-""")
+""", language="python")
 # code_editor('pip install africastalking python-dotenv', lang='python')
 
 
@@ -55,7 +55,7 @@ st.write('Run this in your Terminal')
 st.code("""
     # install required dependancies (npm)
     npm install africastalking
-    """)
+    """, language="javascript")
 
 st.write('Copy to your Script')
 st.code("""
@@ -63,7 +63,7 @@ st.code("""
         apiKey: process.env.AT_API_KEY,
         username: process.env.AT_USERNAME
     });
-""")
+""", language="javascript")
 # code_editor('pip install africastalking python-dotenv', lang='python')
 
 
@@ -76,7 +76,7 @@ st.write('Run this in your Terminal')
 st.code("""
     # install required dependancies 
     gem 'africastalking'
-    """)
+    """, language="ruby")
 
 st.write('Copy to your Script')
 st.code("""
@@ -87,7 +87,7 @@ st.code("""
 
     at = AfricasTalking::Initialize.new(username, api_key)
 
-""")
+""", language="ruby")
 # code_editor('pip install africastalking python-dotenv', lang='python')
 
 
@@ -100,7 +100,7 @@ st.code("""
     # install required dependancies (npm)
     npm install africastalking
     npm install --save-dev @types/africastalking
-    """)
+    """, language="typescript")
 
 st.write('Copy to your Script')
 st.code("""
@@ -111,7 +111,7 @@ st.code("""
         apiKey: "YOUR_API_KEY",        
     });
 
-""")
+""", language="typescript")
 # code_editor('pip install africastalking python-dotenv', lang='python')
 
 
@@ -124,7 +124,7 @@ st.write('Run this in your Terminal')
 st.code("""
     # install required dependancies
     cargo install --git https://github.com/rust-nairobi/africastalking-rust
-    """)
+    """, language="rust")
 
 st.write('Copy to your Script')
 st.code("""
@@ -136,7 +136,7 @@ st.code("""
         let env = "USERNAME";           
 
         let gateway = AfricasTalkingGateway::new(&username, &apikey, &env);
-""")
+""", language="rust")
 # code_editor('pip install africastalking python-dotenv', lang='python')
 
 
@@ -156,7 +156,7 @@ st.code("""
             implementation("com.github.AfricasTalkingLtd.africastalking-java:core:3.4.11")
         }
 
-    """)
+    """, language="kotlin")
 
 st.write('Copy to your Script')
 st.code("""
@@ -168,7 +168,7 @@ st.code("""
 
         AfricasTalking.initialize(username, apiKey)
     }
-""")
+""", language="kotlin")
 # code_editor('pip install africastalking python-dotenv', lang='python')
 
 
@@ -181,7 +181,7 @@ st.write('Run this in your Terminal')
 st.code("""
     # install required dependancies
     composer require africastalking/africastalking
-    """)
+    """, language="php")
 
 st.write('Copy to your Script')
 st.code("""
@@ -194,7 +194,7 @@ st.code("""
     $apiKey   = 'YOUR_API_KEY'; 
 
     $AT = new AfricasTalking($username, $apiKey);
-""")
+""", language="php")
 # code_editor('pip install africastalking python-dotenv', lang='python')
 
 
@@ -214,7 +214,7 @@ st.code("""
         implementation 'com.github.AfricasTalkingLtd.africastalking-java:core:3.4.11'
         }
 
-    """)
+    """, language="java")
 
 st.write('Copy to your Script')
 st.code("""
@@ -231,5 +231,5 @@ st.code("""
 
             }
         }
-""")
+""", language="java")
 # code_editor('pip install africastalking python-dotenv', lang='python')
