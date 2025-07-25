@@ -25,6 +25,6 @@ st.write("""
 st.image('src/img/Screen Shot 2025-07-24 at 17.16.18.png')
 st.success("""
 
-    **Tip:** You can login using either Github, google or Microsoft account
+    **Tip:** You can login using either Github, Google or Microsoft account
 
     """)
