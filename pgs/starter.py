@@ -28,3 +28,22 @@ st.success("""
     **Tip:** You can login using either Github, Google or Microsoft account
 
     """)
+
+st.write("""
+       the Sandbox window below will be displayed, where you can 
+       \n- Edit & Update your profile
+       \n- View Documentation
+       \n- Go to AT Sandbox
+""")
+
+st.image()
+
+st.info("""
+
+    **Note:** if you have just registered your account, you dont have team yet, so we have to create one
+
+""")
+
+st.markdown("""
+    
+""")
