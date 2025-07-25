@@ -9,8 +9,6 @@ st.markdown("""
 
     Before we begin, make sure you have the following:
 
-    \n- Python 3.x installed
-
     \n- An Africa’s Talking account
 
     \n- A registered sender ID (optional, but ideal for production)
@@ -165,10 +163,73 @@ st.code("""
     import com.africastalking.AfricasTalking
 
     fun main() {
-        val username = "sandbox"      
+        val username = "USERNAME"      
         val apiKey   = "YOUR_API_KEY" 
 
         AfricasTalking.initialize(username, apiKey)
     }
+""")
+# code_editor('pip install africastalking python-dotenv', lang='python')
+
+
+
+
+# PHP installation 
+st.write('- **PHP**')
+
+st.write('Run this in your Terminal')
+st.code("""
+    # install required dependancies
+    composer require africastalking/africastalking
+    """)
+
+st.write('Copy to your Script')
+st.code("""
+    <?php
+    require 'vendor/autoload.php';
+
+    use AfricasTalking\SDK\AfricasTalking;
+
+    $username = 'USERNAME';      
+    $apiKey   = 'YOUR_API_KEY'; 
+
+    $AT = new AfricasTalking($username, $apiKey);
+""")
+# code_editor('pip install africastalking python-dotenv', lang='python')
+
+
+
+
+# Java installation 
+st.write('- **Java**')
+
+st.write('Run this in your Terminal')
+st.code("""
+    # install required dependancies
+    repositories {
+        maven { url "https://jitpack.io" }
+        }
+
+        dependencies {
+        implementation 'com.github.AfricasTalkingLtd.africastalking-java:core:3.4.11'
+        }
+
+    """)
+
+st.write('Copy to your Script')
+st.code("""
+    import com.africastalking.AfricasTalking;
+    import com.africastalking.SmsService;
+
+    public class Main {
+        public static void main(String[] args) {
+            String username = "USERNAME";     
+            String apiKey = "YOUR_API_KEY";  
+            
+            // Initialize the SDK
+            AfricasTalking.initialize(username, apiKey);
+
+            }
+        }
 """)
 # code_editor('pip install africastalking python-dotenv', lang='python')
