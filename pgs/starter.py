@@ -135,3 +135,26 @@ with col8:
     st.image('src/img/Screen Shot 2025-07-25 at 13.49.02.png')
 
 st.subheader("API Key Setup")
+
+col1, col2 = st.columns([1, 5])
+
+with col1:
+    st.image('src/img/Screen Shot 2025-07-25 at 14.23.05.png', width=380)
+
+with col2:
+    st.image('src/img/Screen Shot 2025-07-25 at 14.23.55.png')
+
+
+st.markdown("""
+
+Congratulations! Your Africa’s Talking account is now active and your API key has been securely generated.  
+You are all set to begin coding in your chosen environment whether sandbox/live using your new `username` and `API_KEY`.  
+EchoBridge will now authenticate with Africa’s Talking and allow you to simulate or launch real communications (SMS, USSD, Voice, Airtime, Payments) with confidence.
+
+""")
+
+st.warning("""
+⚠️ Security Warning:  
+\nYour `API_KEY` is a highly privileged secret, treat it like a password. Never share it publicly, commit it to source code (even private repos), 
+or expose it in frontend/client-side interfaces. If you suspect any leak, revoke and rotate your key immediately.
+""")
