@@ -4,7 +4,7 @@ import sys
 sys.path.insert(1, './modules')
 
 from code_editor import code_editor
-from func import autogenerate_code_samples
+from func import autogenerate_code_samples, send_sample_message
 
 
 st.markdown(
@@ -116,7 +116,7 @@ if submit:
     else:
         
         st.warning("""
-            ⚠️ **Warning*:*  
+            **⚠️ Warning:**  
             This code has been automatically generated. Please **review thoroughly, test extensively**, and validate every assumption or edge case before deploying. Do not rely solely on its correctness or security.
         """)
         code_editor(autogenerate_code_samples(sample_sms_code, language), theme=theme, allow_reset=True, lang=language.lower())
@@ -130,8 +130,11 @@ st.markdown("""
 
 with st.container(border=True):
     sample_message = ""
+    
     test_key = st.text_input('**API KEY**', type="password")
+    
     col1, col2 = st.columns(2)
+    
     with col1:
         test_username = st.text_input('**Username**')
         test_phone_number = st.number_input("**Phone Number:**", value=None, min_value=0, max_value=int(10e10))
@@ -148,3 +151,14 @@ with st.container(border=True):
 with st.form("Test Environment"):
     test_submission = st.form_submit_button("**Test**", type="primary", use_container_width=True)
 
+    if test_submission and test_key and test_username and test_phone_number and sample_message is not None:
+        response = send_sample_message(test_key, test_username, test_phone_number, sample_message)
+        st.code(response)
+
+    else:
+        st.error("""
+        
+            **Error**
+            \nCheck Your Credentials **API_KEY** or **USERNAME**
+
+        """)
