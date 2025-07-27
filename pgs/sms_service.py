@@ -128,7 +128,8 @@ st.markdown("""
 
 """)
 
-with st.form("Test Environment"):
+with st.container(border=True):
+    sample_message = ""
     test_key = st.text_input('**API KEY**', type="password")
     col1, col2 = st.columns(2)
     with col1:
@@ -136,7 +137,14 @@ with st.form("Test Environment"):
         test_phone_number = st.number_input("**Phone Number:**", value=None, min_value=0, max_value=int(10e10))
 
     with col2:
-        text_choice = st.selectbox("Text Type", options=["Sample Text", "Custom",])
+        text_choice = st.selectbox("**Text Type**", options=["Sample Text", "Custom",])
 
+        if text_choice=="Custom":
+            sample_message = st.text_area("**Enter Your message:**")
+
+        elif text_choice=="Sample Text":
+            sample_message="Hello Geek!"
+
+with st.form("Test Environment"):
     test_submission = st.form_submit_button("**Test**", type="primary", use_container_width=True)
 
