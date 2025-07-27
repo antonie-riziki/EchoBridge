@@ -27,7 +27,7 @@ sms = africastalking.SMS
 airtime = africastalking.Airtime
 
 
-@st.dialog("🈴 Vaa Smart Digital Passport")
+@st.dialog("🈴 EchoBridge Digital Passport")
 def digital_passport(first_name, surname, phone_number, email, face_id):
 	personal_details, profile_pic = st.columns(2)
 

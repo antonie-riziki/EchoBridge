@@ -120,4 +120,22 @@ if submit:
             This code has been automatically generated. Please **review thoroughly, test extensively**, and validate every assumption or edge case before deploying. Do not rely solely on its correctness or security.
         """)
         code_editor(autogenerate_code_samples(sample_sms_code, language), theme=theme, allow_reset=True, lang=language.lower())
-        
+    
+
+st.markdown("""
+
+    Live Environment
+
+""")
+
+with st.form("Test Environment"):
+    test_key = st.text_input('**API KEY**', type="password")
+    col1, col2 = st.columns(2)
+    with col1:
+        test_username = st.text_input('**Username**')
+
+    with col2:
+        test_phone_number = st.number_input("**Phone Number:**", value=None, min_value=0, max_value=int(10e10))
+
+    test_submission = st.form_submit_button("**Test**", type="primary", use_container_width=True)
+

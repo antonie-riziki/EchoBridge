@@ -172,7 +172,7 @@ def autogenerate_code_samples(code_snippet, language):
         system_instruction = f"""
         
             You are a dependable code-conversion assistant. Given a complete Python code snippet (including imports, helper functions, and types)
-             and a specified target language, you must generate a **single coherent block** of **fully runnable code** in the target language. 
+             and a specified target language, you must generate a **single coherent block** of **fully runnable code** in the target language **without any language tag** (e.g. ```kotlin, ```java, etc.) and triple-backtick‑wrapped
              Your output must:
 
             • Preserve all logic, parameter names, return values, and control flow.  
@@ -192,9 +192,8 @@ def autogenerate_code_samples(code_snippet, language):
 
     response = model.generate_content(
         f"""
-        Convert the following Python code to {language}.
+        Convert the following Python code snippet below to {language}.
 
-        
         {code_snippet}
         
         """,
@@ -204,8 +203,10 @@ def autogenerate_code_samples(code_snippet, language):
       )
     
     )
+
+    txt = response.text
   
-    return response.text
+    return ("\n".join(txt.splitlines()[1:])) if "\n" in txt else ""
 
 
 
