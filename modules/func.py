@@ -182,7 +182,7 @@ def autogenerate_code_samples(code_snippet, language):
             • If the target language lacks a direct feature, explicitly note it and provide a real workaround.  
             • Avoid adding features beyond the original Python snippet.  
             • Format only the code (no analysis, no extra text).
-            • Return the code snippet as a block, NOT packed inside a comment
+            • Do not include any language annotation (like ```kotlin, ```java, etc.) in the code fences. Use plain code blocks without specifying language.
 
             Respond only with the translated code block when a python code snippet as input. 
             """
