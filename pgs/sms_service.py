@@ -1,6 +1,10 @@
 import streamlit as st 
+import sys
+
+sys.path.insert(1, './modules')
 
 from code_editor import code_editor
+from func import autogenerate_code_samples
 
 
 st.markdown(
@@ -60,7 +64,7 @@ sample_sms_code = """
     load_dotenv()
 
     africastalking.initialize(
-        username='EMID',
+        username='USERNAME',
         api_key = os.getenv("AT_API_KEY")
     )
 
@@ -107,7 +111,13 @@ with st.form('Settings'):
 
 if submit:
     if language=="Python":
-        code = code_editor(sample_sms_code, theme=theme, allow_reset=True)
+        code = code_editor(sample_sms_code, theme=theme, allow_reset=True, lang='python')
 
     else:
-        pass
+        
+        st.warning("""
+            ⚠️ **Warning*:*  
+            This code has been automatically generated. Please **review thoroughly, test extensively**, and validate every assumption or edge case before deploying. Do not rely solely on its correctness or security.
+        """)
+        code_editor(autogenerate_code_samples(sample_sms_code, language), theme=theme, allow_reset=True, lang=language.lower())
+        
