@@ -133,9 +133,10 @@ with st.form("Test Environment"):
     col1, col2 = st.columns(2)
     with col1:
         test_username = st.text_input('**Username**')
+        test_phone_number = st.number_input("**Phone Number:**", value=None, min_value=0, max_value=int(10e10))
 
     with col2:
-        test_phone_number = st.number_input("**Phone Number:**", value=None, min_value=0, max_value=int(10e10))
+        text_choice = st.selectbox("Text Type", options=["Sample Text", "Custom",])
 
     test_submission = st.form_submit_button("**Test**", type="primary", use_container_width=True)
 
