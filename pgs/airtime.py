@@ -99,5 +99,5 @@ if submit:
             **⚠️ Warning:**  
             This code has been automatically generated. Please **review thoroughly, test extensively**, and validate every assumption or edge case before deploying. Do not rely solely on its correctness or security.
         """)
-        code_editor(autogenerate_code_samples(sample_airtime_code, language), theme=theme, allow_reset=True, lang=language.lower())
+        code = code_editor(autogenerate_code_samples(sample_airtime_code, language), theme=theme, allow_reset=True, lang=language.lower())
   
