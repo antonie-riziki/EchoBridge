@@ -160,7 +160,7 @@ with st.form("Test Environment"):
         st.warning("""
         
             **Warning:**
-            \nkindly Fill in Your Credentials **API_KEY** or **USERNAME** before proceeding
+            \nKindly Fill in Your Credentials **API_KEY** or **USERNAME** before proceeding
 
         """)
 
