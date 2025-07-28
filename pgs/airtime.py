@@ -5,7 +5,6 @@ sys.path.insert(1, ['./modules'])
 
 from code_editor import code_editor
 from func import autogenerate_code_samples
-from sample_tests import send_sample_message
 
 
 st.markdown(
@@ -72,7 +71,7 @@ sample_airtime_code = """
             print(response)
 
         except Exception as e:
-            print(f'Houston, we have a problem: {e}')
+            print('Houston, we have a problem:')
 
 """
 
