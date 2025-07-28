@@ -204,32 +204,7 @@ def autogenerate_code_samples(code_snippet, language):
     
     )
 
-    txt = response.text
   
-    return ("\n".join(txt.splitlines()[1:])) if "\n" in txt else ""
-
-
-def send_sample_message(test_key, test_username, test_phone_number, test_message):
-    africastalking.initialize(
-        username=test_key,
-        api_key = test_username
-    )
-
-    # Target Recipients List
-    recipients=[f"+254{str(test_phone_number)}"]
-
-    #Set Your Message
-    message = test_message;
-
-    # Set your shortCode or senderId
-    sender = 20880
-
-    try:
-        response = sms.send(message, recipients, sender)
-
-        return response
-
-    except Exception as e:
-        return f'Houston, we have a problem: {e}'
+    return response
 
 

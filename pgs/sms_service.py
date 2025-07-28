@@ -1,10 +1,11 @@
 import streamlit as st 
 import sys
 
-sys.path.insert(1, './modules')
+sys.path.insert(1, ['./modules'])
 
 from code_editor import code_editor
-from func import autogenerate_code_samples, send_sample_message
+from func import autogenerate_code_samples
+from sample_tests import send_sample_message
 
 
 st.markdown(
@@ -155,10 +156,12 @@ with st.form("Test Environment"):
         response = send_sample_message(test_key, test_username, test_phone_number, sample_message)
         st.code(response)
 
-    else:
-        st.error("""
+    elif:
+        st.warning("""
         
-            **Error**
-            \nCheck Your Credentials **API_KEY** or **USERNAME**
+            **Warning:**
+            \nkindly Fill in Your Credentials **API_KEY** or **USERNAME** before proceeding
 
         """)
+
+    elif:
