@@ -5,6 +5,7 @@ sys.path.insert(1, './modules')
 
 from code_editor import code_editor
 from func import autogenerate_code_airtime_samples
+from sample_tests import send_sample_airtime
 
 
 st.markdown(
@@ -128,7 +129,7 @@ with st.form("Test Environment"):
     test_submission = st.form_submit_button("**Test**", type="primary", use_container_width=True)
 
     if test_submission and test_key and test_username and test_phone_number and sample_message is not None:
-        response = send_sample_message(test_key, test_username, test_phone_number, sample_message)
+        response = send_sample_airtime(test_key, test_username, test_phone_number, sample_message)
         st.code(response)
 
     else:
