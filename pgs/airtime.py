@@ -99,7 +99,44 @@ if submit:
             **⚠️ Warning:**  
             This code has been automatically generated. Please **review thoroughly, test extensively**, and validate every assumption or edge case before deploying. Do not rely solely on its correctness or security.
         """)
-        # response_code = autogenerate_code_airtime_samples(str(sample_airtime_code), language)
-        # code = code_editor(response_code, theme=theme, allow_reset=True, lang=language.lower())
-        final_code = st.code(autogenerate_code_airtime_samples(str(sample_airtime_code), language), language=language)
-        code_editor(final_code, lang=language)
+        
+        final_code_snippet = st.code(autogenerate_code_airtime_samples(str(sample_airtime_code), language), language=language)
+
+
+st.markdown("""
+
+    Live Environment
+
+""")
+
+with st.container(border=True):
+    sample_message = ""
+    
+    test_key = st.text_input('**API KEY**', type="password")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        test_username = st.text_input('**Username**')
+        test_phone_number = st.number_input("**Phone Number:**", value=None, min_value=0, max_value=int(10e10))
+
+    with col2:
+        text_choice = st.selectbox("**Currency Code**", options=["KES", "USD", "UGX", "TZS", "ZMW", "JPY"])
+        amount = st.number_input("**Amount:**", value=None, min_value=0, max_value=int(10e10))
+
+with st.form("Test Environment"):
+    test_submission = st.form_submit_button("**Test**", type="primary", use_container_width=True)
+
+    if test_submission and test_key and test_username and test_phone_number and sample_message is not None:
+        response = send_sample_message(test_key, test_username, test_phone_number, sample_message)
+        st.code(response)
+
+    else:
+        st.warning("""
+        
+            **Warning:**
+            \nKindly Fill in Your Credentials **API_KEY** or **USERNAME** before proceeding
+
+        """)
+
+    
