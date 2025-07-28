@@ -36,3 +36,36 @@ def send_sample_message(test_key, test_username, test_phone_number, test_message
         """)
 
 
+
+
+def send_sample_airtime(test_key, test_username, test_phone_number, test_currency_code, test_amount):
+
+    africastalking.initialize(
+        username=test_username,
+        api_key =test_key
+    )
+
+    airtime = africastalking.Airtime
+
+
+    # Target Recipients List
+    recipients=[f"+254{str(test_phone_number)}"]
+
+    #Set Your Message
+    amount = test_amount
+
+    currency_code = test_currency_code
+
+    try:
+        response = airtime.send(phone_number=recipients, amount=amount, currency_code=currency_code)
+
+        return response
+
+    except Exception as e:
+        return f'Houston, we have a problem: {e}'
+        return st.error("""
+
+            **Error**
+            \nCheck Your Credentials
+
+        """)
