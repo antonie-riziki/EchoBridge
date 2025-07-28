@@ -46,7 +46,7 @@ with st.sidebar:
 
     social_media_icons.render()
 
-pg = st.navigation([reg_page, signin_page, home_page, starter_page, setup_page, sms_service_page])
+pg = st.navigation([reg_page, signin_page, home_page, starter_page, setup_page, sms_service_page, airtime_page])
 
 st.set_page_config(
     page_title="Echo Bridge",
