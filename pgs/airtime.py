@@ -101,4 +101,5 @@ if submit:
         """)
         # response_code = autogenerate_code_airtime_samples(str(sample_airtime_code), language)
         # code = code_editor(response_code, theme=theme, allow_reset=True, lang=language.lower())
-        st.code(autogenerate_code_airtime_samples(str(sample_airtime_code), language), language=language)
+        final_code = st.code(autogenerate_code_airtime_samples(str(sample_airtime_code), language), language=language)
+        code_editor(final_code, lang=language)
