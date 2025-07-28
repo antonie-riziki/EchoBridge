@@ -4,7 +4,7 @@ import sys
 sys.path.insert(1, ['./modules'])
 
 from code_editor import code_editor
-from func import autogenerate_code_samples
+# from func import autogenerate_code_samples
 from sample_tests import send_sample_message
 
 
@@ -19,16 +19,21 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+st.markdown("""
+With the Airtime API from Africa’s Talking, you can effortlessly distribute *virtual, pinless airtime* to mobile users across supported countries. Transactions are handled securely via API endpoints, and delivery status is pushed back to your system through callbacks—no manual telco integration required.
+""")
 
 st.image('https://miro.medium.com/v2/resize:fit:1400/1*x__F1-J_c_VjYFCNCto34Q.jpeg')
 
-st.info("""
-    \n**Bulk SMS**
-    \nIntegrate to your service to send branded messages to multiple numbers instantly
-    
-    \n**Use Case:**
-    Used extensively for appointment reminders, transactional updates, promotions, and customer loyalty messages.  
-    **Examples:** include healthcare appointment reminders, order and delivery notifications, OTP authentication, and flash sale or loyalty offers.  
-    This high‑reach channel ensures timely communication and boosts user engagement.  
 
+st.info("""
+**Use Cases**
+\n**User Incentives & Promotions**  
+Reward users—such as referring a friend, completing a survey, or participating in a campaign—with airtime credits instantly delivered to their phone. This increases engagement and drives uptake.
+
+**Agent & Reseller Platforms**  
+Create systems where agents or resellers distribute airtime at scale, benefiting from volume discounts and real-time transaction validations.
+
+**Corporate Allowance Programs**  
+Disburse airtime allowances to staff or field agents directly through your application, automating routine top‑ups and tracking usage centrally for transparency.
 """)
