@@ -156,7 +156,7 @@ with st.form("Test Environment"):
         response = send_sample_message(test_key, test_username, test_phone_number, sample_message)
         st.code(response)
 
-    elif:
+    else:
         st.warning("""
         
             **Warning:**
@@ -164,4 +164,4 @@ with st.form("Test Environment"):
 
         """)
 
-    elif:
+    
