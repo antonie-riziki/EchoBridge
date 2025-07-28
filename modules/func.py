@@ -165,7 +165,7 @@ def check_and_encrypt_password(password: str, confirm_password: str):
 
 
 
-def autogenerate_code_samples(code_snippet, language):
+def autogenerate_code_samples(code_snippet: str, language: str):
 
     model = genai.GenerativeModel("gemini-2.0-flash", 
 
@@ -207,4 +207,48 @@ def autogenerate_code_samples(code_snippet, language):
   
     return response
 
+
+
+
+def autogenerate_code_airtime_samples(code_snippet: str, language: str):
+
+    model = genai.GenerativeModel("gemini-2.0-flash", 
+
+        system_instruction = f"""
+        
+            You are a dependable code-conversion assistant. Given a complete Python code snippet (including imports, helper functions, and types)
+             and a specified target language, you must generate a **single coherent block** of **fully runnable code** in the target language **without any language tag** (e.g. ```kotlin, ```java, etc.) and triple-backtick‑wrapped
+             Your output must:
+
+            • Preserve all logic, parameter names, return values, and control flow.  
+            • Include valid imports or dependencies in the target language (no fictional or hallucinated packages).  
+            • Use idiomatic constructs (loops, error handling) and simple, clear comments—easy for beginners.  
+            • Provide a minimal entry point (e.g. main(), example usage) so the code runs immediately without modification.  
+            • If the target language lacks a direct feature, explicitly note it and provide a real workaround.  
+            • Avoid adding features beyond the original Python snippet.  
+            • Format only the code (no analysis, no extra text).
+            • Do not include any language annotation (like ```kotlin, ```java, etc.) in the code fences. Use plain code blocks without specifying language.
+
+            Respond only with the translated code block when a python code snippet as input. 
+            """
+
+            )
+
+
+    response = model.generate_content(
+        f"""
+        Convert the following Python code snippet below to {language}.
+
+        {code_snippet}
+        
+        """,
+        generation_config = genai.GenerationConfig(
+        max_output_tokens=1000,
+        temperature=1.5, 
+      )
+    
+    )
+
+  
+    return response
 
