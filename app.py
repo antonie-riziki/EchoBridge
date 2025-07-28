@@ -11,7 +11,11 @@ starter_page = st.Page("./pgs/starter.py", title="Getting started", icon=":mater
 setup_page = st.Page("./pgs/setup.py", title="Setup & Installation", icon=":material/apk_install:")
 sms_service_page = st.Page("./pgs/sms_service.py", title="Messaging", icon=":material/sms:")
 airtime_page = st.Page("./pgs/airtime.py", title="Airtime", icon=":material/redeem:")
+mobile_data_page = st.Page("./pgs/mobile_data.py", title="Mobile Data", icon=":material/lte_plus_mobiledata_badge:")
+ussd_page = st.Page("./pgs/ussd.py", title="USSD", icon=":material/linked_services:")
 # chatbot_page = st.Page("./pgs/chatbot.py", title="chatbot", icon=":material/chat:")
+
+
 
 
 
@@ -46,7 +50,7 @@ with st.sidebar:
 
     social_media_icons.render()
 
-pg = st.navigation([reg_page, signin_page, home_page, starter_page, setup_page, sms_service_page, airtime_page])
+pg = st.navigation([reg_page, signin_page, home_page, starter_page, setup_page, sms_service_page, airtime_page, mobile_data_page, ussd_page])
 
 st.set_page_config(
     page_title="Echo Bridge",
