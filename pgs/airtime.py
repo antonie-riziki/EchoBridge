@@ -4,7 +4,7 @@ import sys
 sys.path.insert(1, ['./modules'])
 
 from code_editor import code_editor
-# from func import autogenerate_code_samples
+from func import autogenerate_code_samples
 from sample_tests import send_sample_message
 
 
