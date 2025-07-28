@@ -71,7 +71,7 @@ sample_airtime_code = """
             print(response)
 
         except Exception as e:
-            print('Houston, we have a problem:')
+            print(f'Houston, we have a problem: {e}')
 
 """
 
