@@ -205,7 +205,7 @@ def autogenerate_code_samples(code_snippet: str, language: str):
     )
 
   
-    return response
+    return response.text
 
 
 
@@ -250,5 +250,5 @@ def autogenerate_code_airtime_samples(code_snippet: str, language: str):
     )
 
   
-    return response
+    return response.text
 
