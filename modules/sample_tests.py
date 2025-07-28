@@ -52,7 +52,7 @@ def send_sample_airtime(test_key, test_username, test_phone_number, test_currenc
     recipients= "+254" + str(test_phone_number)
 
     #Set Your Message
-    amount = test_amount
+    amount = strr(test_amount)
 
     currency_code = test_currency_code
 
