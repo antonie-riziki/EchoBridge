@@ -128,7 +128,7 @@ with st.form("Test Environment"):
     test_submission = st.form_submit_button("**Test**", type="primary", use_container_width=True)
 
     if test_submission and test_key and test_username and test_phone_number and amount is not None:
-        response = send_sample_airtime(test_key, test_username, test_phone_number, amount, currency_choice)
+        response = send_sample_airtime(test_key, test_username, test_phone_number, currency_choice, amount)
         st.code(response)
 
     else:
