@@ -90,14 +90,15 @@ with st.form('Settings'):
 
 
 if submit:
-    if language: #=="Python":
-    #     code = code_editor(sample_airtime_code, theme=theme, allow_reset=True, lang='python')
+    if language=="Python":
+        code = code_editor(sample_airtime_code, theme=theme, allow_reset=True, lang='python')
 
-    # else:
+    else:
         
         st.warning("""
             **⚠️ Warning:**  
             This code has been automatically generated. Please **review thoroughly, test extensively**, and validate every assumption or edge case before deploying. Do not rely solely on its correctness or security.
         """)
-        code = code_editor(autogenerate_code_airtime_samples(str(sample_airtime_code), language), theme=theme, allow_reset=True, lang=language.lower())
-  
+        response_code = autogenerate_code_airtime_samples(str(sample_airtime_code), language)
+        # code = code_editor(response_code, theme=theme, allow_reset=True, lang=language.lower())
+        st.code(response_code, language=language)
