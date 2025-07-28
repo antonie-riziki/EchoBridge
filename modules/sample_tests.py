@@ -49,7 +49,7 @@ def send_sample_airtime(test_key, test_username, test_phone_number, test_currenc
 
 
     # Target Recipients List
-    recipients= "+254" + str(phone_number)
+    recipients= "+254" + str(test_phone_number)
 
     #Set Your Message
     amount = test_amount
