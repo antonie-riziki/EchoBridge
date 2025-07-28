@@ -205,6 +205,6 @@ def autogenerate_code_samples(code_snippet, language):
     )
 
   
-    return response
+    return response.text
 
 
