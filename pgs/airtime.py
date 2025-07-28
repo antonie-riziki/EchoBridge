@@ -1,7 +1,7 @@
 import streamlit as st 
 import sys
 
-sys.path.insert(1, ['./modules'])
+sys.path.insert(1, './modules')
 
 from code_editor import code_editor
 from func import autogenerate_code_samples
@@ -65,7 +65,6 @@ sample_airtime_code = """
         print(phone_number)
 
         try:
-            
             responses = airtime.send(phone_number=recipients, amount=amount, currency_code=currency_code)
 
             print(response)
