@@ -90,10 +90,10 @@ with st.form('Settings'):
 
 
 if submit:
-    if language=="Python":
-        code = code_editor(sample_airtime_code, theme=theme, allow_reset=True, lang='python')
+    if language: #=="Python":
+    #     code = code_editor(sample_airtime_code, theme=theme, allow_reset=True, lang='python')
 
-    else:
+    # else:
         
         st.warning("""
             **⚠️ Warning:**  
