@@ -101,7 +101,7 @@ if submit:
             This code has been automatically generated. Please **review thoroughly, test extensively**, and validate every assumption or edge case before deploying. Do not rely solely on its correctness or security.
         """)
         
-        final_code_snippet = st.code(autogenerate_code_airtime_samples(str(sample_airtime_code), language), language=language)
+        final_code_snippet = st.code(autogenerate_code_airtime_samples(str(sample_airtime_code), language), language=language.lower())
 
 
 st.markdown("""
