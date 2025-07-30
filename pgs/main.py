@@ -129,6 +129,5 @@ st.markdown("""
     
     """)
 
-st.write('Here isthe sample text')
 
 

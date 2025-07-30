@@ -134,6 +134,7 @@ with st.container(border=True):
     sample_message = ""
     
     test_key = st.text_input('**API KEY**', type="password")
+    test_sender_id = st.text_input("**SENDER CODE/ID**")
     
     col1, col2 = st.columns(2)
     
@@ -154,7 +155,7 @@ with st.form("Test Environment"):
     test_submission = st.form_submit_button("**Test**", type="primary", use_container_width=True)
 
     if test_submission and test_key and test_username and test_phone_number and sample_message is not None:
-        response = send_sample_message(test_key, test_username, test_phone_number, sample_message)
+        response = send_sample_message(test_key, test_username, test_phone_number, sample_message, test_sender_id)
         st.code(response)
 
     else:

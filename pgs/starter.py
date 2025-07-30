@@ -105,6 +105,20 @@ st.image('src/img/Screen Shot 2025-07-25 at 13.42.45.png')
 st.info("🎉 Africa’s Talking will deposit **KES 10.00** to your account wallet (for new accounts only)")
 
 st.subheader('Africa’s Talking Products')
+
+st.markdown("""
+
+        **SMS:**
+        Engage easily and effectively with your customer through messaging text
+
+        **Voice:**
+        Enrich your user call experience by adding features that would be inaccessible using normal mobile lines
+
+        **USSD:**
+        Build realtime user interactive text-based solution that can be accessed on every type of mobile phone
+
+""")
+
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
@@ -119,6 +133,17 @@ with col3:
 with col4:
     st.image('src/img/Screen Shot 2025-07-25 at 13.47.43.png')
 
+
+st.markdown("""
+
+        **Airtime:**
+        Make micro payments to users by sending virtual mobile credit (airtime) instantly
+
+        **Mobile Data:**
+        Make micro payments to users by sending virtual mobile data instantly
+
+        
+""")
 
 col5, col6, col7, col8 = st.columns(4)
 

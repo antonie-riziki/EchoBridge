@@ -2,7 +2,7 @@
 import africastalking
 import streamlit as st 
 
-def send_sample_message(test_key, test_username, test_phone_number, test_message):
+def send_sample_message(test_key, test_username, test_phone_number, test_message, sender_id):
 
     africastalking.initialize(
         username=test_username,
@@ -19,7 +19,7 @@ def send_sample_message(test_key, test_username, test_phone_number, test_message
     message = test_message;
 
     # Set your shortCode or senderId
-    sender = 20880
+    sender = sender_id
 
     try:
         response = sms.send(message, recipients, sender)
